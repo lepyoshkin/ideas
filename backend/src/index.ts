@@ -1,9 +1,20 @@
-import exp from 'constants'
 import express from 'express'
+
+const ideas = [
+  { nick: 'cool-idea-1', name: 'Idea 1', description: 'Description of idea 1', likes: 0 },
+  { nick: 'cool-idea-2', name: 'Idea 2', description: 'Description of idea 2', likes: 0 },
+  { nick: 'cool-idea-3', name: 'Idea 3', description: 'Description of idea 3', likes: 0 },
+  { nick: 'cool-idea-4', name: 'Idea 4', description: 'Description of idea 4', likes: 0 },
+  { nick: 'cool-idea-5', name: 'Idea 5', description: 'Description of idea 5', likes: 0 },
+]
 
 const expressApp = express()
 expressApp.get('/ping', (req, res) => {
   res.send('pong')
+})
+
+expressApp.get('/ideas', (req, res) => {
+  res.send(ideas)
 })
 
 expressApp.listen(3000, () => {
