@@ -1,5 +1,10 @@
-function App() {
-  return <>test</>;
-}
+import { TrpcProvider } from './lib/trpc'
+import { AllIdeasPage } from './pages/AllIdeasPage'
 
-export default App;
+export const App = () => {
+  return (
+    <TrpcProvider>
+      <AllIdeasPage />
+    </TrpcProvider>
+  )
+}
