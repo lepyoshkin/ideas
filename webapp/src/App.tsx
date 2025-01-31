@@ -25,7 +25,7 @@ export const App = () => {
       name: 'Idea 5',
       description: 'description 5',
     },
-  ];
+  ]
 
   return (
     <div>
@@ -39,5 +39,5 @@ export const App = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
